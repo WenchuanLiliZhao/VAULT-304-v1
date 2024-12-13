@@ -1,16 +1,20 @@
-import {PageLayout} from "./components/PageLayout"
-import "./appStyles/_app.scss"
-import { AllPosts } from "./pages/AllPosts"
-
+import { PageLayout } from "./codes/components/PageLayout";
+import "./codes/appStyles/_app.scss";
+import { AllPosts } from "./docs/AllPosts";
+import { ScrollToTop } from "./codes/functions/ScrollToTop";
+import { BrowserRouter, Route, Routes } from "react-router";
 
 function App() {
-
   return (
-    <div>
-      <PageLayout page={AllPosts.Post_1} />
-
-    </div>
-  )
+    <BrowserRouter>
+      <>
+        <ScrollToTop />
+        <Routes>
+          <Route index element={<PageLayout page={AllPosts.Post_1} />} />
+        </Routes>
+      </>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

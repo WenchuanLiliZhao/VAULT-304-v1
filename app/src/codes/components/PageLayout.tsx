@@ -1,9 +1,9 @@
 import styles from "./PageLayout.module.scss"
 
 import React from "react";
-import { Language, Page } from "../types/PageTypes";
 import { LanguageSwicther } from "./LanguageSwitcher";
 import { useLanguage } from "../hooks/useLanguage";
+import { Language, Page } from "../../docs/_types/PageTypes";
 
 export const PageLayout: React.FC<{ page: Page }> = ({ page }) => {
   const [language, setLanguage] = useLanguage();

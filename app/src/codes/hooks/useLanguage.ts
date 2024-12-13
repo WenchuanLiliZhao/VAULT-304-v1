@@ -1,6 +1,6 @@
 // hooks/useLanguage.ts
 import { useState, useEffect } from "react";
-import { Language } from "../types/PageTypes";
+import { Language } from "../../docs/_types/PageTypes";
 
 export const useLanguage = (): [Language, (newLanguage: Language) => void] => {
   // 初始化语言状态，从 localStorage 中读取，如果没有则默认为浏览器语言或 'en'

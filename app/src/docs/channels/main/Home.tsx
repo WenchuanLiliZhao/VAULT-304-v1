@@ -1,11 +1,11 @@
-import { Page } from "../../../types/PageTypes";
+import { Page } from "../../_types/PageTypes";
 
-const NotFound: Page = {
+const Home: Page = {
   info: {
-    id: "*",
+    id: "", // this is home
     title: {
-      en: "404 Not Found",
-      zh: "404 找不到页面",
+      en: "Home",
+      zh: "首页",
     },
     summary: {
       en: "hahahha",
@@ -17,4 +17,4 @@ const NotFound: Page = {
   },
 };
 
-export default NotFound;
+export default Home;

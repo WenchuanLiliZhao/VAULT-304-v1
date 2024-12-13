@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Dropdown } from './Dropdown';
-import { Language } from '../types/PageTypes';
+import { Language } from '../../docs/_types/PageTypes';
 
 interface Props {
   currentLanguage: Language;

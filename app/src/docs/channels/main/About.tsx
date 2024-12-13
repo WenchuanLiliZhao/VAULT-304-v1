@@ -1,4 +1,4 @@
-import { Page } from "../../../types/PageTypes";
+import { Page } from "../../_types/PageTypes";
 
 const About: Page = {
   info: {

@@ -1,4 +1,4 @@
-import { Page } from "../../../types/PageTypes";
+import { Page } from "../../_types/PageTypes";
 
 const Post_2: Page = {
   info: {
