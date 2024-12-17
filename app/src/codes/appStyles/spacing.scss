@@ -1,12 +1,11 @@
 :root {
-  --spacing-nav-size: 56px;
-  --spacing-aside-size: 300px;
+  --spacing-nav-size: 64px;
 
   --spacing-grid-column-gap: 24px;
-  --spacing-max-content-width: 1200px;
+  --spacing-max-content-width: 1400px;
   --spacing-max-para-width: 800px;
 
-  --spacing-content-padding: 48px;
+  --spacing-content-padding: 40px;
   @media only screen and (max-width: 800px) {
     --spacing-content-padding: 32px;
   }

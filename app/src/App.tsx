@@ -1,8 +1,9 @@
-import { PageLayout } from "./codes/components/PageLayout";
+import { Layout } from "./codes/components/layout/BasicLayout";
 import "./codes/appStyles/_app.scss";
-import { AllPosts } from "./docs/AllPosts";
 import { ScrollToTop } from "./codes/functions/ScrollToTop";
 import { BrowserRouter, Route, Routes } from "react-router";
+import { Channels } from "./docs/Channels";
+import { Page } from "./docs/_types/PageShapes";
 
 function App() {
   return (
@@ -10,7 +11,15 @@ function App() {
       <>
         <ScrollToTop />
         <Routes>
-          <Route index element={<PageLayout page={AllPosts.Post_1} />} />
+          <Route index element={<Layout page={Channels.Overview} />} />
+
+          {Object.values(Channels).map((channel: Page, i: number) => (
+            <Route
+              key={i}
+              path={`/${channel.info.id}`}
+              element={<Layout page={channel} />}
+            />
+          ))}
         </Routes>
       </>
     </BrowserRouter>

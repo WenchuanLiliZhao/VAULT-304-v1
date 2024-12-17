@@ -1,0 +1,12 @@
+.icon-btn {
+  padding: 7px;
+  border-radius: 1000px;
+  overflow: hidden;
+
+  &.medium {
+    .icon {
+      vertical-align: middle;
+      font-size: 22px;
+    }
+  }
+}

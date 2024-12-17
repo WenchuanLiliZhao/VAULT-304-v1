@@ -1,20 +1,13 @@
-import { Page } from "../../_types/PageTypes";
+import { Page } from "../../_types/PageShapes";
 
 const About: Page = {
   info: {
     id: "about",
-    title: {
-      en: "About",
-      zh: "关于",
-    },
-    summary: {
-      en: "hahahha",
-      zh: "哈哈哈哈哈",
-    },
+    title: "About",
+    summary: "hahahha",
+    pageType: "post",
   },
-  content: {
-    en: ["Hahahahhah", "啊哈哈哈哈哈哈"],
-  },
+  content: ["Hahahahhah", "啊哈哈哈哈哈哈"],
 };
 
 export default About;

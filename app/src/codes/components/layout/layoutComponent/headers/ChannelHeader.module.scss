@@ -1,0 +1,34 @@
+.channel-header {
+  padding-left: var(--spacing-content-padding);
+  padding-right: var(--spacing-content-padding);
+  padding-top: 80px;
+  padding-bottom: 56px;
+
+  max-width: var(--spacing-max-content-width);
+  margin: 0 auto;
+  
+  .title-bar {
+    padding-bottom: 32px;
+    border-bottom: 1px dashed var(--color-main);
+
+    .title-bar-container {
+      max-width: 760px;
+
+      .title {
+        font-size: 56px;
+        line-height: 1.25;
+        font-weight: 800;
+        text-transform: uppercase;
+  
+        transform: translate(-0.075em, 0);
+      }
+  
+      .summary {
+        margin-top: 16px;
+        font-family: var(--ff-serif);
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

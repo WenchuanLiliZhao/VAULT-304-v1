@@ -1,6 +1,17 @@
 :root {
   // text colors
   & {
-    --color-text-main: #1A1A1A;
+    --color-main: #1a1a1a;
+    --color-sec: #858585;
+    --color-sec-trans: rgba(0, 0, 0, 0.48);
+
+    --color-bg-main: white;
+    --color-bg-sec: #fafafa;
+    --color-bg-sec-trans: rgba(0, 0, 0, 0.02);
+    --color-bg-sec-2: #f5f5f5;
+    --color-bg-sec-2-trans: rgba(0, 0, 0, 0.04);
+
+    --color-rainbow-yellow: #fed396;
+    --color-rainbow-orange: #eb765d;
   }
 }

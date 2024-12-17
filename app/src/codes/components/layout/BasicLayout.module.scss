@@ -1,0 +1,7 @@
+.main {
+  max-width: var(--spacing-max-content-width);
+  padding: 0 var(--spacing-content-padding);
+  margin: 0 auto;
+  display: grid;
+  row-gap: 48px;
+}
