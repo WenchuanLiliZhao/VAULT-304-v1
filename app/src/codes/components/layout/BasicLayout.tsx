@@ -5,6 +5,7 @@ import { Nav } from "./layoutComponent/navigations/Nav";
 import { ContentMapper } from "../../functions/ContentMapper";
 import { ChannelHeader } from "./layoutComponent/headers/ChannelHeader";
 import { Footer } from "./layoutComponent/navigations/Footer";
+import { PostHeader } from "./layoutComponent/headers/PostLayout";
 
 export const Layout: React.FC<{ page: Page }> = ({ page }) => {
   function layout() {
@@ -13,7 +14,7 @@ export const Layout: React.FC<{ page: Page }> = ({ page }) => {
         return (
           <>
             <Nav />
-            <ChannelHeader page={page} />
+            <PostHeader page={page} />
             <main className={styles["main"]}>
               <ContentMapper page={page} />
             </main>

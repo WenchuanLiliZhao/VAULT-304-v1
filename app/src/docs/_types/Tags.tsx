@@ -4,7 +4,7 @@ export const Tags = {
   Mathematics: "Mathematics",
 
   ProjectNote: "Project Note",
-  Life: "Life",
+  LifeStyle: "Life Style",
   Travel: "Travel",
   WebDevelopment: "Web Development",
   ReactJS: "React.JS",

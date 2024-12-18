@@ -7,6 +7,8 @@ import { Page } from "./docs/_types/PageShapes";
 import { AllPosts } from "./docs/AllPosts";
 import { TagPage } from "./docs/_types/TagPage";
 import { TAG_ROUTE_PARAMS, TAG_ROUTES } from "./constants/routes";
+import { AllProjects } from "./docs/AllProjects";
+import { AllAuthors } from "./docs/AllAuthors";
 
 function App() {
   return (
@@ -24,9 +26,28 @@ function App() {
             />
           ))}
 
-          <Route path={`${TAG_ROUTES.TAGS_BASE}/:${TAG_ROUTE_PARAMS.TAG_NAME}`} element={<TagPage />} />
+          <Route
+            path={`${TAG_ROUTES.TAGS_BASE}/:${TAG_ROUTE_PARAMS.TAG_NAME}`}
+            element={<TagPage />}
+          />
 
           {Object.values(AllPosts).map((channel: Page, i: number) => (
+            <Route
+              key={i}
+              path={`/${channel.info.slug}`}
+              element={<Layout page={channel} />}
+            />
+          ))}
+
+          {Object.values(AllProjects).map((channel: Page, i: number) => (
+            <Route
+              key={i}
+              path={`/${channel.info.slug}`}
+              element={<Layout page={channel} />}
+            />
+          ))}
+
+          {Object.values(AllAuthors).map((channel: Page, i: number) => (
             <Route
               key={i}
               path={`/${channel.info.slug}`}

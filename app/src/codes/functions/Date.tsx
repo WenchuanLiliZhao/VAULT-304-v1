@@ -20,17 +20,18 @@ export const DateFormatter = (
   const parts = formattedDate.replace(",", "").split(" ");
 
   // Determine the positions based on "en-GB" formatted dates
-  let yearPart = '';
-  let monthPart = '';
-  let dayPart = '';
+  let yearPart = "";
+  let monthPart = "";
+  let dayPart = "";
 
   // Assign properly based on the number of parts received
   if (parts.length === 3) {
     [dayPart, monthPart, yearPart] = parts;
   } else if (parts.length === 2) {
-    if (options.year) { // Year is likely missing, so assign positions for month and day
+    if (options.year) {
+      // Year is likely missing, so assign positions for month and day
       [dayPart, monthPart] = parts;
-      yearPart = ''; // Default to empty if year is absent
+      yearPart = ""; // Default to empty if year is absent
     } else {
       // If there's no month, assume incorrect usage and throw an error
       throw new Error("Unexpected date format; can't split into components.");
@@ -46,16 +47,26 @@ export const DateFormatter = (
   };
 };
 
+export const DateFormatterText: React.FC<{
+  date: [number, number, number];
+}> = ({ date }) => {
+  return (
+    <span>
+      {DateFormatter(date).mon} {DateFormatter(date).day},{" "}
+      {DateFormatter(date).year}
+    </span>
+  );
+};
 
 export function GetTodayDate(): { year: string; month: string; day: string } {
   const today = new Date();
   const year = today.getFullYear().toString();
-  
+
   // Add leading zero if month is less than 10
-  const month = (today.getMonth() + 1).toString().padStart(2, '0');
-  
+  const month = (today.getMonth() + 1).toString().padStart(2, "0");
+
   // Add leading zero if day is less than 10
-  const day = today.getDate().toString().padStart(2, '0');
+  const day = today.getDate().toString().padStart(2, "0");
 
   return {
     year: year,
@@ -64,8 +75,6 @@ export function GetTodayDate(): { year: string; month: string; day: string } {
   };
 }
 
-
-
 export function GetWeekDay(dateArray: [number, number, number]): string {
   const [year, month, day] = dateArray;
 
@@ -73,7 +82,15 @@ export function GetWeekDay(dateArray: [number, number, number]): string {
   const date = new Date(year, month - 1, day);
 
   // Define an array mapping the getDay() output to weekday names.
-  const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const weekDays = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
 
   // Use getDay() method to find the day of the week.
   const dayOfWeek = date.getDay();
