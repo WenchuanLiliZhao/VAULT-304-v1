@@ -3,7 +3,7 @@ import { Authors } from "../../Authors";
 
 const Post_1: Page = {
   info: {
-    id: "post_1",
+    slug: "https://i.pinimg.com/1200x/4d/b0/7a/4db07a81080662617980409c56205d75.jpg",
     title: "Post 1",
     summary: "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque pretium pulvinar quam, nec porta quam placerat et. Quisque eu diam quam. Vestibulum tristique metus nec ipsum pellentesque tincidunt. Etiam vulputate condimentum leo. Praesent scelerisque ante ac sem cursus dignissim.",
     pageType: "post",
@@ -12,7 +12,7 @@ const Post_1: Page = {
   postInfo: {
     update: [2024, 8, 1],
     cover: "https://i.pinimg.com/1200x/4d/b0/7a/4db07a81080662617980409c56205d75.jpg",
-    authors: Authors.Wenchuan,
+    author: Authors.Wenchuan,
     tags: ["Mathematics"]
   },
 

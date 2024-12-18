@@ -14,9 +14,16 @@
   z-index: var(--z-index-nav);
   background-color: var(--color-bg-main);
 
+  @media only screen and (max-width: 800px) {
+    .title-bar {
+      display: none !important;
+    }
+  }
+
   .left {
     display: flex;
     height: 100%;
+    column-gap: 24px;
 
     .title-bar {
       display: flex;
@@ -41,7 +48,6 @@
 
     .channels {
       display: flex;
-      padding: 0 24px;
       gap: 24px;
       align-items: center;
 

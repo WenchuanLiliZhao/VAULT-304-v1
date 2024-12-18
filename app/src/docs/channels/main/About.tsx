@@ -2,7 +2,7 @@ import { Page } from "../../_types/PageShapes";
 
 const About: Page = {
   info: {
-    id: "about",
+    slug: "about",
     title: "About",
     summary: "hahahha",
     pageType: "post",

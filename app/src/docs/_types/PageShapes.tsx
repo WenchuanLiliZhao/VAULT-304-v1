@@ -3,12 +3,13 @@ import { Tag } from "./Tags";
 export interface Page {
   info: Info;
   postInfo?: PostInfo;
-  personInfo?: PersonInfo
+  personInfo?: PersonInfo;
+  projectInfo?: ProjectInfo;
   content: PageContent;
 }
 
 export interface Info {
-  id: string;
+  slug: string;
   title: string;
   title_display?: (string | JSX.Element)
   summary: string;
@@ -18,13 +19,21 @@ export interface Info {
 export interface PostInfo {
   update: [number, number, number];
   cover: string;
-  authors: Page;
+  author: Page;
   tags: Tag[];
 }
 
 export interface PersonInfo {
   avatarUrl: string;
 }
+
+export interface ProjectInfo {
+  roles: Role[]
+  icon: string
+  team: string
+}
+
+export type Role = "UI/UX Design" | "Product Design"
 
 export type PageType = "post" | "channel" | "person";
 

@@ -2,7 +2,7 @@ import { Page } from "../_types/PageShapes";
 
 const NotFound: Page = {
   info: {
-    id: "*",
+    slug: "*",
     title: "404 Not Found",
     summary: "hahahha",
     pageType: "channel",

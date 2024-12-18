@@ -4,6 +4,7 @@ import { Page } from "../../../docs/_types/PageShapes";
 import { HoverBox } from "../buttons/HoverBox";
 import { DateFormatter } from "../../functions/Date";
 import { MDBlock } from "../markdown/MDBlock";
+import { PageLink } from "../../functions/Links";
 
 interface Props {
   posts: Page[];
@@ -13,8 +14,8 @@ interface Props {
 
 export const PostFeed: React.FC<Props> = ({
   posts,
-  initialLoadCount = 5, // Default to 6 if undefined
-  loadCount = 5, // Default to 6 if undefined
+  initialLoadCount = 20, // Default to 6 if undefined
+  loadCount = 20, // Default to 6 if undefined
 }) => {
   // State to keep track of how many posts are currently visible
   const [visibleCount, setVisibleCount] = useState(initialLoadCount);
@@ -33,7 +34,7 @@ export const PostFeed: React.FC<Props> = ({
     <div className={styles["post-feed"]}>
       <div className={styles["visible-posts"]}>
         {visiblePosts.map((item: Page, i: number) => (
-          <React.Fragment key={i}>
+          <PageLink key={i} page={item}>
             {item.postInfo && (
               <div className={styles["card-container"]}>
                 <div className={styles["card"]}>
@@ -64,12 +65,12 @@ export const PostFeed: React.FC<Props> = ({
                     <div className={styles["author-bar"]}>
                       <div className={styles["author-avatar"]}>
                         <img
-                          src={item.postInfo.authors.personInfo?.avatarUrl}
-                          alt={`${item.postInfo.authors.info.title} Avatar`}
+                          src={item.postInfo.author.personInfo?.avatarUrl}
+                          alt={`${item.postInfo.author.info.title} Avatar`}
                         />
                       </div>
                       <div className={styles["author-name"]}>
-                        {item.postInfo.authors.info.title}
+                        {item.postInfo.author.info.title}
                       </div>
                     </div>
                   </div>
@@ -78,7 +79,7 @@ export const PostFeed: React.FC<Props> = ({
                 </div>
               </div>
             )}
-          </React.Fragment>
+          </PageLink>
         ))}
       </div>
 

@@ -1,13 +1,13 @@
 import { Page } from "../../_types/PageShapes";
 
-const Playgroud: Page = {
+const Contact: Page = {
   info: {
-    slug: "playground", // this is home
-    title: "Playground",
-    summary: "playground",
+    slug: "contact", // this is home
+    title: "Contact",
+    summary: "Contact",
     pageType: "channel",
   },
   content: ["Hahahahhah", "啊哈哈哈哈哈哈"],
 };
 
-export default Playgroud;
+export default Contact;

@@ -2,7 +2,7 @@ import { Page } from "../_types/PageShapes";
 
 const Author_Wenchuan: Page = {
   info: {
-    id: "author-wenchuan-lili-zhao",
+    slug: "author-wenchuan-lili-zhao",
     title: "Wenchuan Lili Zhao",
     summary: "",
     pageType: "person",

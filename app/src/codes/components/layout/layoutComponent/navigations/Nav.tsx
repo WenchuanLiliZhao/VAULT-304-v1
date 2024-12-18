@@ -10,7 +10,6 @@ export const Nav = () => {
     Channels.About,
     Channels.Overview,
     Channels.Projects,
-    Channels.Playground,
   ];
 
   return (
@@ -25,7 +24,7 @@ export const Nav = () => {
             {channels.map((channel: Page, i: number) => (
               <NavLink
                 key={i}
-                to={`/${channel.info.id}`}
+                to={`/${channel.info.slug}`}
                 className={styles["channel"]}
               >
                 {channel.info.title}

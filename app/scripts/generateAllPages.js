@@ -14,7 +14,7 @@ const srcDocsDir = path.join(__dirname, "../src/docs");
  * @param {string} folder - Folder name inside source docs.
  * @param {string} exportFileName - Name of the export file without extension.
  */
-async function generatePages(postDirectories, folder, exportFileName) {
+async function generatePages(folder, postDirectories, exportFileName) {
   try {
     const srcPagesDir = path.join(srcDocsDir, folder);
     const outputDir = srcDocsDir;
@@ -32,7 +32,14 @@ async function generatePages(postDirectories, folder, exportFileName) {
         const fileName = path.basename(file, ".tsx");
         const importName = `${fileName}`;
 
-        const importPath = `./${folder}/${dir}/${fileName}`;
+        var importPath = "";
+        
+        if (dir === "") {
+          importPath = `./${folder}/${fileName}`;
+        } else {
+          importPath = `./${folder}/${dir}/${fileName}`;
+        }
+
         allImports.push(`import ${importName} from "${importPath}";`);
         allPosts[`${fileName}`] = importName;
       }
@@ -59,6 +66,7 @@ ${postsEntries}
   }
 }
 
-generatePages(["", "main"], "channels", "Channels");
-generatePages(["Test", "2025"], "posts", "Posts");
-generatePages([""], "authors", "Authors");
+generatePages("channels", ["", "main"], "Channels");
+generatePages("posts", ["Test", "2025"], "Posts");
+generatePages("authors", [""], "Authors");
+generatePages("projects", [""], "Projects");
