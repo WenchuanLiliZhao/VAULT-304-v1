@@ -1,5 +1,5 @@
 import { Page } from "../_types/PageShapes";
-import { Authors } from "../Authors";
+import { AllAuthors } from "../AllAuthors";
 
 const Proj_Tingo: Page = {
   info: {
@@ -11,7 +11,7 @@ const Proj_Tingo: Page = {
   postInfo: {
     update: [2025, 1,2],
     cover: "https://teapodo.com/_next/static/media/logo.925ac851.png",
-    author: Authors.Wenchuan,
+    author: AllAuthors.Wenchuan,
     tags: ["Project Note", "UI/UX Designs", "Web Development", "React.JS"]
   },
 

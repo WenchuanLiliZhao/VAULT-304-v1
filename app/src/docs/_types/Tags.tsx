@@ -1,9 +1,13 @@
-export type Tag =
-  | "Mathematics"
-  | "UI/UX Designs"
-  | "Project Note"
-  | "Life"
-  | "Travel"
-  | "Illustration"
-  | "Web Development"
-  | "React.JS"
+export const Tags = {
+  UIUXDesigns: "UI/UX Designs",
+  Illustration: "Illustration",
+  Mathematics: "Mathematics",
+
+  ProjectNote: "Project Note",
+  Life: "Life",
+  Travel: "Travel",
+  WebDevelopment: "Web Development",
+  ReactJS: "React.JS",
+};
+
+export type Tag = (typeof Tags)[keyof typeof Tags];

@@ -1,5 +1,5 @@
 import { Page } from "../../_types/PageShapes";
-import { Authors } from "../../Authors";
+import { AllAuthors } from "../../AllAuthors";
 
 const Post_4: Page = {
   info: {
@@ -12,7 +12,7 @@ const Post_4: Page = {
   postInfo: {
     update: [2019, 8, 5],
     cover: "",
-    author: Authors.Wenchuan,
+    author: AllAuthors.Wenchuan,
     tags: ["Life", "UI/UX Designs"]
   },
 

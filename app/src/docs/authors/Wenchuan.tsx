@@ -1,6 +1,6 @@
 import { Page } from "../_types/PageShapes";
 
-const Author_Wenchuan: Page = {
+const Wenchuan: Page = {
   info: {
     slug: "author-wenchuan-lili-zhao",
     title: "Wenchuan Lili Zhao",
@@ -15,4 +15,4 @@ const Author_Wenchuan: Page = {
   content: [],
 };
 
-export default Author_Wenchuan;
+export default Wenchuan;

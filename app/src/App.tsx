@@ -2,9 +2,11 @@ import { Layout } from "./codes/components/layout/BasicLayout";
 import "./codes/appStyles/_app.scss";
 import { ScrollToTop } from "./codes/functions/ScrollToTop";
 import { BrowserRouter, Route, Routes } from "react-router";
-import { Channels } from "./docs/Channels";
+import { AllChannels } from "./docs/AllChannels";
 import { Page } from "./docs/_types/PageShapes";
-import { Posts } from "./docs/Posts";
+import { AllPosts } from "./docs/AllPosts";
+import { TagPage } from "./docs/_types/TagPage";
+import { TAG_ROUTE_PARAMS, TAG_ROUTES } from "./constants/routes";
 
 function App() {
   return (
@@ -12,9 +14,9 @@ function App() {
       <>
         <ScrollToTop />
         <Routes>
-          <Route index element={<Layout page={Channels.Overview} />} />
+          <Route index element={<Layout page={AllChannels.Overview} />} />
 
-          {Object.values(Channels).map((channel: Page, i: number) => (
+          {Object.values(AllChannels).map((channel: Page, i: number) => (
             <Route
               key={i}
               path={`/${channel.info.slug}`}
@@ -22,7 +24,9 @@ function App() {
             />
           ))}
 
-          {Object.values(Posts).map((channel: Page, i: number) => (
+          <Route path={`${TAG_ROUTES.TAGS_BASE}/:${TAG_ROUTE_PARAMS.TAG_NAME}`} element={<TagPage />} />
+
+          {Object.values(AllPosts).map((channel: Page, i: number) => (
             <Route
               key={i}
               path={`/${channel.info.slug}`}

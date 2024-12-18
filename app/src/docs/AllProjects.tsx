@@ -4,7 +4,7 @@ import Proj_QiankaCom from "./projects/Proj_QiankaCom";
 import Proj_Teapodo from "./projects/Proj_Teapodo";
 import Proj_Tingo from "./projects/Proj_Tingo";
 
-export const Projects = {
+export const AllProjects = {
   Proj_CharmingChineseCulture,
   Proj_QiankaCom,
   Proj_Teapodo,

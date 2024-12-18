@@ -4,6 +4,7 @@ import { Page } from "../../../docs/_types/PageShapes";
 import { Nav } from "./layoutComponent/navigations/Nav";
 import { ContentMapper } from "../../functions/ContentMapper";
 import { ChannelHeader } from "./layoutComponent/headers/ChannelHeader";
+import { Footer } from "./layoutComponent/navigations/Footer";
 
 export const Layout: React.FC<{ page: Page }> = ({ page }) => {
   function layout() {
@@ -16,6 +17,7 @@ export const Layout: React.FC<{ page: Page }> = ({ page }) => {
             <main className={styles["main"]}>
               <ContentMapper page={page} />
             </main>
+            <Footer />
           </>
         );
 
@@ -27,6 +29,7 @@ export const Layout: React.FC<{ page: Page }> = ({ page }) => {
             <main className={styles["main"]}>
               <ContentMapper page={page} />
             </main>
+            <Footer />
           </>
         );
 

@@ -47,14 +47,23 @@ export const DateFormatter = (
 };
 
 
-export function GetTodayDateArray(): [number, number, number] {
+export function GetTodayDate(): { year: string; month: string; day: string } {
   const today = new Date();
-  const year = today.getFullYear();
-  const month = today.getMonth() + 1; // Months are zero-indexed, so +1 for human-readable month
-  const day = today.getDate();
+  const year = today.getFullYear().toString();
+  
+  // Add leading zero if month is less than 10
+  const month = (today.getMonth() + 1).toString().padStart(2, '0');
+  
+  // Add leading zero if day is less than 10
+  const day = today.getDate().toString().padStart(2, '0');
 
-  return [year, month, day];
+  return {
+    year: year,
+    month: month,
+    day: day,
+  };
 }
+
 
 
 export function GetWeekDay(dateArray: [number, number, number]): string {

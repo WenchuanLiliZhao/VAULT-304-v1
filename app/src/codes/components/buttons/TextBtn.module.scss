@@ -1,0 +1,43 @@
+/* Basic Button Styles */
+.button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+// size
+.large {
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 16px;
+}
+
+
+// type
+.primary {
+  color: #ffffff;
+  background-color: #007bff;
+}
+
+.secondary {
+  color: #ffffff;
+  background-color: #6c757d;
+}
+
+.danger {
+  color: #ffffff;
+  background-color: #dc3545;
+}
+
+.text {
+  color: var(--color-sec);
+  background-color: var(--color-bg-sec-2);
+}
+
+
+.disabled {
+  background-color: #e9ecef;
+  color: #6c757d;
+  cursor: not-allowed;
+  pointer-events: none;
+}

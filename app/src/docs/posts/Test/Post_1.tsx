@@ -1,5 +1,5 @@
 import { Page } from "../../_types/PageShapes";
-import { Authors } from "../../Authors";
+import { AllAuthors } from "../../AllAuthors";
 
 const Post_1: Page = {
   info: {
@@ -12,7 +12,7 @@ const Post_1: Page = {
   postInfo: {
     update: [2024, 8, 1],
     cover: "https://i.pinimg.com/1200x/4d/b0/7a/4db07a81080662617980409c56205d75.jpg",
-    author: Authors.Wenchuan,
+    author: AllAuthors.Wenchuan,
     tags: ["Mathematics"]
   },
 

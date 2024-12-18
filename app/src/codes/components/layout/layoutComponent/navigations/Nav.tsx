@@ -1,15 +1,15 @@
 import { Link, NavLink } from "react-router";
 import { Page } from "../../../../../docs/_types/PageShapes";
-import { Channels } from "../../../../../docs/Channels";
+import { AllChannels } from "../../../../../docs/AllChannels";
 import { SiteInfo } from "../../../../../SiteInfo";
 import styles from "./Nav.module.scss";
 import { IconBtn } from "../../../buttons/IconBtn";
 
 export const Nav = () => {
   const channels = [
-    Channels.About,
-    Channels.Overview,
-    Channels.Projects,
+    AllChannels.About,
+    AllChannels.Overview,
+    AllChannels.Projects,
   ];
 
   return (

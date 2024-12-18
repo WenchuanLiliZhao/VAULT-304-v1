@@ -66,7 +66,7 @@ ${postsEntries}
   }
 }
 
-generatePages("channels", ["", "main"], "Channels");
-generatePages("posts", ["Test", "2025"], "Posts");
-generatePages("authors", [""], "Authors");
-generatePages("projects", [""], "Projects");
+generatePages("channels", ["", "main"], "AllChannels");
+generatePages("posts", ["Test", "2025"], "AllPosts");
+generatePages("authors", [""], "AllAuthors");
+generatePages("projects", [""], "AllProjects");

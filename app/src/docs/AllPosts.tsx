@@ -13,7 +13,7 @@ import Post_7 from "./posts/Test/Post_7";
 import Post_8 from "./posts/Test/Post_8";
 import Post_9 from "./posts/Test/Post_9";
 
-export const Posts = {
+export const AllPosts = {
   Post_1,
   Post_10,
   Post_11,

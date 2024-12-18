@@ -1,14 +1,14 @@
 import { SortPostByDate } from "../codes/functions/SortPosts";
-import { Posts } from "./Posts";
-import { Projects } from "./Projects";
+import { AllPosts } from "./AllPosts";
+import { AllProjects } from "./AllProjects";
 
-const PostsByDate = SortPostByDate(Posts);
+const PostsByDate = SortPostByDate(AllPosts);
 
 const FeatureProject = [
-  Projects.Proj_Teapodo,
-  Projects.Proj_Tingo,
-  Projects.Proj_QiankaCom,
-  Projects.Proj_CharmingChineseCulture,
+  AllProjects.Proj_Teapodo,
+  AllProjects.Proj_Tingo,
+  AllProjects.Proj_QiankaCom,
+  AllProjects.Proj_CharmingChineseCulture,
 ];
 
 export { PostsByDate, FeatureProject };
