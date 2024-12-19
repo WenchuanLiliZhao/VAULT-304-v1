@@ -1,6 +1,6 @@
 import { PostFeed } from "../../../codes/components/card&feed/PostFeed";
 import { SmallProjectFeed } from "../../../codes/components/card&feed/SmallProjectFeed";
-import { Section } from "../../../codes/components/layout/layoutComponent/sections/Section";
+import { Section } from "../../../codes/components/layout/layoutComponents/sections/Section";
 import { Page } from "../../_types/PageShapes";
 import { FeatureProject, PostsByDate } from "../../Sort";
 import Projects from "./Projects";

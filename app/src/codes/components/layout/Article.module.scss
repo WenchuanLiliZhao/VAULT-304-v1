@@ -1,0 +1,46 @@
+.article {
+  max-width: var(--spacing-max-content-width);
+  margin: 0 auto;
+  padding-left: var(--spacing-content-padding);
+  padding-right: var(--spacing-content-padding);
+
+  font-size: 20px;
+  font-family: var(--ff-serif);
+  line-height: 1.5;
+
+  > * {
+    max-width: var(--spacing-max-para-width);
+    margin-left: auto;
+    margin-right: auto;
+
+    &:first-child {
+      margin-top: 0px !important;
+    }
+  }
+
+  & > p, & > ol, & > ul {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  ul {
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  ol {
+    li {
+      list-style: decimal;
+    }
+  }
+
+  li {
+    margin-left: 1.5em;
+  }
+
+  pre {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+}

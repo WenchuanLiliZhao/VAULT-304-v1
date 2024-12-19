@@ -1,17 +1,16 @@
 import styles from "./PostLayout.module.scss";
 import { Page } from "../../../../../docs/_types/PageShapes";
-import { SiteInfo } from "../../../../../SiteInfo";
 import { DateFormatterText } from "../../../../functions/Date";
 
 export const PostHeader: React.FC<{ page: Page }> = ({ page }) => {
   return (
     <header className={styles["post-header"]}>
-      {page.postInfo && (
-        <>
-          <div className={styles["label"]}>
-            {page.postInfo?.tags[0] || SiteInfo.title}
-          </div>
-          <div className={styles["title"]}>{page.info.title}</div>
+      <>
+        {page.postInfo?.tags[0] && (
+          <div className={styles["label"]}>{page.postInfo?.tags[0]}</div>
+        )}
+        <div className={styles["title"]}>{page.info.title}</div>
+        {page.postInfo && (
           <div className={styles["author-bar"]}>
             <div className={styles["avatar"]}>
               <img
@@ -26,8 +25,8 @@ export const PostHeader: React.FC<{ page: Page }> = ({ page }) => {
               {<DateFormatterText date={page.postInfo.update} />}
             </div>
           </div>
-        </>
-      )}
+        )}
+      </>
     </header>
   );
 };

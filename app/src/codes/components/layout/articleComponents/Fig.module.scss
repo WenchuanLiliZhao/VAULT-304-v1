@@ -1,0 +1,32 @@
+.figure {
+  &.medium {
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+  }
+
+  &.full {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+
+  .image {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .caption {
+    max-width: var(--spacing-max-para-width);
+    font-size: 16px;
+    color: var(--color-sec);
+    text-align: center;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

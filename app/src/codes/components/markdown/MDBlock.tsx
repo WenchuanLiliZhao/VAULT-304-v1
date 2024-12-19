@@ -1,5 +1,4 @@
 import styles from "./MDBlock.module.scss";
-import "./MDBlock.scss";
 
 import React from "react";
 import ReactMarkdown from "react-markdown";
@@ -23,6 +22,7 @@ export const MDBlock: React.FC<{ children: string }> = ({ children }) => {
       remarkPlugins={[remarkMath, remarkGfm]}
       rehypePlugins={[rehypeKatex, rehypeHighlight, rehypeRaw]}
       components={{
+
         pre: ({ children }) => {
           // Note: Extracting the code block from the pre area
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
